@@ -69,13 +69,13 @@ function diamine_upgrade() {
 }
 
 var goldmine_geldmachen = window.setInterval(function() {
-    geld = Number(geld) + Number((5 * goldmine_level));
+    geld = Number(geld) + Number((goldmine_level));
     update();
     gameSave();
-}, 5000);
+}, 1000);
 
 var diamine_geldmachen = window.setInterval(function() {
-    geld = Number(geld) + Number((5 * diamine_level));
+    geld = Number(geld) + Number((3 * diamine_level));
     update();
     gameSave();
-}, 5000);
+}, 1000);
