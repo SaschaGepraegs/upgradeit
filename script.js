@@ -1,5 +1,5 @@
 var goldmine_level = 0;
-var geld = 0;
+var geld = 10;
 var goldmine_faktor = 0;
 
 if (localStorage.getItem("gameIsSaved") == null) {
