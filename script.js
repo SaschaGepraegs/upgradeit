@@ -2,6 +2,7 @@ var goldmine_level = 0;
 var geld = 100;
 var goldmine_faktor = 0;
 var diamine_level = 0;
+var allg_faktor = (diamine_level * 3) + goldmine_level;
 
 if (localStorage.getItem("gameIsSaved") == null) {
     localStorage.setItem("gameIsSaved", true);
@@ -23,7 +24,7 @@ function update() {
     document.getElementById("diamine-levelangabe").innerHTML = "Level: " + diamine_level + "/10";
     document.getElementById("diamine_geldsekunde").innerHTML = diamine_level * 3 + " Geld/Sekunde";
     document.getElementById("diamine_progress").value = diamine_level;
-    document.getElementById("gpros").innerHTML = "Aktuell machst du " + (goldmine_level + (diamine_level * 3)) + " Geld pro Sekunde"
+    document.getElementById("gpros").innerHTML = "Aktuell machst du " + allg_faktor + " Geld pro Sekunde"
 
 }
 
