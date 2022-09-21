@@ -34,7 +34,7 @@ function gameLoad() {
 }
 
 function goldmine_upgrade() {
-    if (goldmine_level > 10) {
+    if (goldmine_level > 9) {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
         if (geld > 100 || geld == 100) {
