@@ -34,6 +34,9 @@ function gameLoad() {
 }
 
 function goldmine_upgrade() {
-    goldmine_level++;
-    gameSave();
+    if (geld > 100 || geld == 100) {
+        geld = geld - 100;
+        goldmine_level++;
+        gameSave();
+    }
 }
