@@ -23,6 +23,7 @@ function update() {
     document.getElementById("diamine-levelangabe").innerHTML = "Level: " + diamine_level + "/10";
     document.getElementById("diamine_geldsekunde").innerHTML = diamine_level * 3 + " Geld/Sekunde";
     document.getElementById("diamine_progress").value = diamine_level;
+    document.getElementById("gpros").innerHTML = "Aktuell machst du " (goldmine_level + (diamine_level * 3)) + " Geld pro Sekunde"
 
 }
 
