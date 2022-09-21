@@ -1,10 +1,10 @@
-var goldmine_level;
-var geld;
-var goldmine_faktor;
+var goldmine_level = 0;
+var geld = 0;
+var goldmine_faktor = 0;
 
 if (localStorage.getItem("gameIsSaved") == null) {
     localStorage.setItem("gameIsSaved", true);
-    console.log("game was not saved, created save file");
+    console.log("game was not saved yet, creating save file...");
     gameSave();
 } else {
     console.log("game save found, loading...");
