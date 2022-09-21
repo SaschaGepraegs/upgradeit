@@ -36,7 +36,7 @@ function gameSave() {
 function gameLoad() {
     goldmine_level = localStorage.getItem("goldmine_level");
     geld = localStorage.getItem("geld");
-    goldmine_level = localStorage.getItem("diamine_level");
+    diamine_level = localStorage.getItem("diamine_level");
     update();
 }
 
