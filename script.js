@@ -48,6 +48,6 @@ function goldmine_upgrade() {
 }
 
 var goldmine_geldmachen = window.setInterval(function() {
-    geld = Number(geld) + Number((5 * goldmine_faktor));
+    geld = Number(geld) + Number((5 * goldmine_level));
     update();
 }, 5000);
