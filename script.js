@@ -38,5 +38,7 @@ function goldmine_upgrade() {
         geld = geld - 100;
         goldmine_level++;
         gameSave();
+    } else {
+        window.alert("Du hast nicht genügend Geld für diesen Kaufvorgang!")
     }
 }
