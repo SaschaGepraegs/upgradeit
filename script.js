@@ -1,5 +1,5 @@
 var goldmine_level = 0;
-var geld = 100;
+var geld = 10;
 var goldmine_faktor = 0;
 var diamine_level = 0;
 var silbermine_level = 0;
