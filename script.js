@@ -46,3 +46,7 @@ function goldmine_upgrade() {
         }
     }
 }
+
+var goldmine_geldmachen = window.setInterval(function() {
+    geld = geld + (5 * goldmine_faktor);
+}, 5000);
