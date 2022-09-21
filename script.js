@@ -18,14 +18,22 @@ function update() {
     document.getElementById("goldmine-levelangabe").innerHTML = "Level: " + goldmine_level + "/10";
     document.getElementById("Kontostand").innerHTML = "Kontostand: " + geld;
     document.getElementById("goldmine_geldsekunde").innerHTML = "Geld/Sekunde";
+    document.getElementById("goldmine_progress").value = goldmine_level;
 }
 
 function gameSave() {
     localStorage.setItem("goldmine_level", goldmine_level);
     localStorage.setItem("geld", geld);
+    update();
 }
 
 function gameLoad() {
     goldmine_level = localStorage.getItem("goldmine_level");
     geld = localStorage.getItem("geld");
+    update();
+}
+
+function goldmine_upgrade() {
+    goldmine_level++;
+    gameSave();
 }
