@@ -16,7 +16,7 @@ if (localStorage.getItem("gameIsSaved") == null) {
 update();
 
 function update() {
-    var allg_faktor = Number(goldmine_level * 3) + Number(diamine_level) + Number(silbermine_level * 0.3);
+    var allg_faktor = Number(goldmine_level) + Number(diamine_level * 3) + Number(silbermine_level * 0.3);
     document.getElementById("goldmine-levelangabe").innerHTML = "Level: " + goldmine_level + "/10";
     document.getElementById("Kontostand").innerHTML = "Kontostand: " + Math.round(geld);
     document.getElementById("goldmine_geldsekunde").innerHTML = goldmine_level + " Geld/Sekunde";
