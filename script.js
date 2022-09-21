@@ -42,7 +42,7 @@ function goldmine_upgrade() {
             goldmine_level++;
             gameSave();
         } else {
-            window.alert("Du hast nicht genügend Geld für diesen Kaufvorgang oder hast bereits das maximum erreicht!")
+            window.alert("Du hast nicht genügend Geld für diesen Kaufvorgang!")
         }
     }
 }
