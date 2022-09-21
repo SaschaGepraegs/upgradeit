@@ -106,3 +106,7 @@ var silbermine_geldmachen = window.setInterval(function() {
     update();
     gameSave();
 }, 1000);
+
+function assignToMenu() {
+    window.location.assign("menu.html");
+}
