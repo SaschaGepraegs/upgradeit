@@ -110,3 +110,8 @@ var silbermine_geldmachen = window.setInterval(function() {
 function assignToMenu() {
     window.location.assign("menu.html");
 }
+
+function reset() {
+    localStorage.clear();
+    window.location.assign("index.html");
+}
