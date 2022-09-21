@@ -17,7 +17,7 @@ update();
 function update() {
     document.getElementById("goldmine-levelangabe").innerHTML = "Level: " + goldmine_level + "/10";
     document.getElementById("Kontostand").innerHTML = "Kontostand: " + geld;
-    document.getElementById("goldmine_geldsekunde").innerHTML = "Geld/Sekunde";
+    document.getElementById("goldmine_geldsekunde").innerHTML = goldmine_level + " Geld/Sekunde";
     document.getElementById("goldmine_progress").value = goldmine_level;
 }
 
@@ -50,4 +50,5 @@ function goldmine_upgrade() {
 var goldmine_geldmachen = window.setInterval(function() {
     geld = Number(geld) + Number((5 * goldmine_level));
     update();
+    gameSave();
 }, 5000);
