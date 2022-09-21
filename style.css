@@ -4,14 +4,14 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-#Goldmine-div {
+.gold {
     background-color: #FFD700;
 }
 
-#Diamine-div {
-    background-color: #B9F2FF;
+.dia {
+    background-color: #00d0ff;
 }
 
-#Silbermine-div {
+.silver {
     background-color: #C0C0C0;
 }
