@@ -34,11 +34,15 @@ function gameLoad() {
 }
 
 function goldmine_upgrade() {
-    if (geld > 100 || geld == 100 && goldmine_level < 11) {
-        geld = geld - 100;
-        goldmine_level++;
-        gameSave();
+    if (goldmine_level > 11) {
+        window.alert("Du hast bereits das Maximum erreicht!");
     } else {
-        window.alert("Du hast nicht genügend Geld für diesen Kaufvorgang oder hast bereits das maximum erreicht!")
+        if (geld > 100 || geld == 100) {
+            geld = geld - 100;
+            goldmine_level++;
+            gameSave();
+        } else {
+            window.alert("Du hast nicht genügend Geld für diesen Kaufvorgang oder hast bereits das maximum erreicht!")
+        }
     }
 }
