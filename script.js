@@ -18,7 +18,7 @@ update();
 function update() {
     document.getElementById("goldmine-levelangabe").innerHTML = "Level: " + goldmine_level + "/10";
     document.getElementById("Kontostand").innerHTML = "Kontostand: " + geld;
-    document.getElementById("goldmine_geldsekunde").innerHTML = goldmine_level + " Geld/Sekunde";
+    document.getElementById("goldmine_geldsekunde").innerHTML = goldmine_level * 3 + " Geld/Sekunde";
     document.getElementById("goldmine_progress").value = goldmine_level;
     document.getElementById("diamine-levelangabe").innerHTML = "Level: " + diamine_level + "/10";
     document.getElementById("diamine_geldsekunde").innerHTML = diamine_level + " Geld/Sekunde";
@@ -59,7 +59,7 @@ function diamine_upgrade() {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
         if (geld > 100 || geld == 100) {
-            geld = geld - 100;
+            geld = geld - 1000;
             diamine_level++;
             gameSave();
         } else {
