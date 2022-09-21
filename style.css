@@ -5,9 +5,13 @@ body {
 }
 
 #Goldmine-div {
-    background-color: #636363;
+    background-color: #dff208;
 }
 
 #Diamine-div {
-    background-color: #6464;
+    background-color: rgb(0, 170, 255);
+}
+
+#Silbermine-div {
+    background-color: #636363;
 }
