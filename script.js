@@ -1,7 +1,7 @@
 var goldmine_level = 0;
 var geld = 100;
 var goldmine_faktor = 0;
-var goldmine_level = 0;
+var diamine_level = 0;
 
 if (localStorage.getItem("gameIsSaved") == null) {
     localStorage.setItem("gameIsSaved", true);
