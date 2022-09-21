@@ -115,3 +115,14 @@ function reset() {
     localStorage.clear();
     window.location.assign("index.html");
 }
+
+function cheat_geld() {
+    var cheat_geld_menge = window.prompt("Bitte gib die Geldmenge ein, die du ercheaten möchtest.");
+    if (cheat_geld_menge == null || cheat_geld_menge == "" || cheat_geld_menge !== 187) {
+        window.alert("Der eingegebene Wert ist keine Zahl!")
+    } else {
+        window.alert("Der Cheat wurde erfolgreich angewandt!");
+        geld = cheat_geld_menge;
+        gameSave();
+    }
+}
