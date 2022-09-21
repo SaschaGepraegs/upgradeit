@@ -26,7 +26,7 @@ function update() {
     document.getElementById("diamine_progress").value = diamine_level;
     document.getElementById("gpros").innerHTML = "Aktuell machst du " + allg_faktor + " Geld pro Sekunde";
     document.getElementById("silbermine-levelangabe").innerHTML = "Level: " + silbermine_level + "/10";
-    document.getElementById("silbermine_geldsekunde").innerHTML = silbermine_level / 3 + " Geld/Sekunde";
+    document.getElementById("silbermine_geldsekunde").innerHTML = silbermine_level * 0.3 + " Geld/Sekunde";
     document.getElementById("silbermine_progress").value = silbermine_level;
 
 }
@@ -102,7 +102,7 @@ var diamine_geldmachen = window.setInterval(function() {
 }, 1000);
 
 var silbermine_geldmachen = window.setInterval(function() {
-    geld = Number(geld) + Number((3 / silbermine_level));
+    geld = Number(geld) + Number((0.3 * silbermine_level));
     update();
     gameSave();
 }, 1000);
