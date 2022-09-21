@@ -18,7 +18,7 @@ update();
 function update() {
     var allg_faktor = (goldmine_level * 3) + diamine_level;
     document.getElementById("goldmine-levelangabe").innerHTML = "Level: " + goldmine_level + "/10";
-    document.getElementById("Kontostand").innerHTML = "Kontostand: " + geld;
+    document.getElementById("Kontostand").innerHTML = "Kontostand: " + Math.round(geld);
     document.getElementById("goldmine_geldsekunde").innerHTML = goldmine_level + " Geld/Sekunde";
     document.getElementById("goldmine_progress").value = goldmine_level;
     document.getElementById("diamine-levelangabe").innerHTML = "Level: " + diamine_level + "/10";
