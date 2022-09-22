@@ -117,12 +117,16 @@ function reset() {
 }
 
 function cheat_geld() {
-    var cheat_geld_menge = window.prompt("Bitte gib die Geldmenge ein, die du ercheaten möchtest.");
-    if (isNaN(cheat_geld_menge)) {
-        window.alert("Der eingegebene Wert ist keine Zahl!")
+    if (goldmine_level == 10 && diamine_level == 10 && silbermine_level == 10) {
+        var cheat_geld_menge = window.prompt("Bitte gib die Geldmenge ein, die du ercheaten möchtest.");
+        if (isNaN(cheat_geld_menge)) {
+            window.alert("Der eingegebene Wert ist keine Zahl!")
+        } else {
+            window.alert("Der Cheat wurde erfolgreich angewandt!");
+            geld = cheat_geld_menge;
+            gameSave();
+        }
     } else {
-        window.alert("Der Cheat wurde erfolgreich angewandt!");
-        geld = cheat_geld_menge;
-        gameSave();
+        window.alert("Diese Funktion wird erst aktiviert, sobald alle Minen maximal aufgelevelt sind!")
     }
 }
