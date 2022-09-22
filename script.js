@@ -51,7 +51,7 @@ function goldmine_upgrade() {
     if (goldmine_level > 9) {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
-        if (geld > 100 || geld == 100) {
+        if (geld > 10 || geld == 10) {
             geld = geld - 100;
             goldmine_level++;
             gameSave();
@@ -65,7 +65,7 @@ function diamine_upgrade() {
     if (diamine_level > 9) {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
-        if (geld > 1000 || geld == 1000) {
+        if (geld > 100 || geld == 100) {
             geld = geld - 1000;
             diamine_level++;
             gameSave();
@@ -79,7 +79,7 @@ function silbermine_upgrade() {
     if (silbermine_level > 9) {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
-        if (geld > 10 || geld == 10) {
+        if (geld > 1 || geld == 1) {
             geld = geld - 10;
             silbermine_level++;
             gameSave();
