@@ -3,6 +3,8 @@ var geld = 10;
 var goldmine_faktor = 0;
 var diamine_level = 0;
 var silbermine_level = 0;
+var prestige_level = 0;
+var kontoüberziehung = false;
 
 if (localStorage.getItem("gameIsSaved") == null) {
     localStorage.setItem("gameIsSaved", true);
@@ -36,6 +38,8 @@ function gameSave() {
     localStorage.setItem("geld", geld);
     localStorage.setItem("diamine_level", diamine_level);
     localStorage.setItem("silbermine_level", silbermine_level);
+    localStorage.setItem("prestige_level", prestige_level);
+    localStorage.setItem("kontoüberziehung", kontoüberziehung);
     update();
 }
 
@@ -44,6 +48,8 @@ function gameLoad() {
     geld = localStorage.getItem("geld");
     diamine_level = localStorage.getItem("diamine_level");
     silbermine_level = localStorage.getItem("silbermine_level");
+    prestige_level = localStorage.getItem("prestige_level")
+    kontoüberziehung = localStorage.getItem("kontoüberziehung")
     update();
 }
 
@@ -51,7 +57,7 @@ function goldmine_upgrade() {
     if (goldmine_level > 9) {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
-        if (geld > 10 || geld == 10) {
+        if ((Boolean(kontoüberziehung) == true && (geld > 10 || geld == 10)) || (geld > 100 || geld == 100)) {
             geld = geld - 100;
             goldmine_level++;
             gameSave();
@@ -65,7 +71,7 @@ function diamine_upgrade() {
     if (diamine_level > 9) {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
-        if (geld > 100 || geld == 100) {
+        if ((Boolean(kontoüberziehung) == true && (geld > 100 || geld == 100)) || geld > 1000 || geld == 1000) {
             geld = geld - 1000;
             diamine_level++;
             gameSave();
@@ -79,7 +85,7 @@ function silbermine_upgrade() {
     if (silbermine_level > 9) {
         window.alert("Du hast bereits das Maximum erreicht!");
     } else {
-        if (geld > 1 || geld == 1) {
+        if ((Boolean(kontoüberziehung) == true && (geld > 1 || geld == 1)) || geld > 10 || geld == 10) {
             geld = geld - 10;
             silbermine_level++;
             gameSave();
@@ -111,6 +117,10 @@ function assignToMenu() {
     window.location.assign("menu.html");
 }
 
+function assignToShop() {
+    window.location.assign("shop.html")
+}
+
 function reset() {
     localStorage.clear();
     window.location.assign("index.html");
@@ -128,5 +138,20 @@ function cheat_geld() {
         }
     } else {
         window.alert("Diese Funktion wird erst aktiviert, sobald alle Minen maximal aufgelevelt sind!")
+    }
+}
+
+function kontoüberziehung_kaufen() {
+    if (kontoüberziehung == false) {
+        if (geld > 300 || geld == 300) {
+            geld = Number(geld) - 300;
+            kontoüberziehung = true;
+            gameSave();
+
+        } else {
+            window.alert("Du hast nicht ausreichend Geld!")
+        }
+    } else {
+        window.alert("bereits gekauft!")
     }
 }
