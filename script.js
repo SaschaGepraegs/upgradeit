@@ -1,3 +1,13 @@
+const d = new Date
+const dmn = new URL
+var sessionId = String(String(d.getHours()) + String(d.getMinutes()))
+var lul = dmn.searchParams.get("sessionId")
+
+if (sessionId != lul) {
+    alert("Bitte starte UpgradeIt: Classic über den UpgradeIt-Launcher! Du wirst nun weitergeleitet!");
+    window.location.assign("https://upgradeit.saschagep.de")
+}
+
 var goldmine_level = 0;
 var geld = 10;
 var goldmine_faktor = 0;
