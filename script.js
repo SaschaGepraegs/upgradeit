@@ -1,6 +1,12 @@
 const d = new Date
 const dmn = new URL(window.location.href)
-var sessionId = String(String(d.getHours()) + String(d.getMinutes()))
+var sessionId;
+
+function newSessionId() {
+    sessionId = String(String(d.getHours()) + String(d.getMinutes()))
+    return sessionId;
+}
+sessionId = newSessionId()
 var lul = dmn.searchParams.get("sessionId")
 
 if (sessionId != lul) {
