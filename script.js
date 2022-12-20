@@ -1,7 +1,7 @@
 const d = new Date
-const dmn = new URL
+const dmn = new URL(window.location.href)
 var sessionId = String(String(d.getHours()) + String(d.getMinutes()))
-var lul = dmn.searchParams.get(window.location.href, "sessionId")
+var lul = dmn.searchParams.get("sessionId")
 
 if (sessionId != lul) {
     alert("Bitte starte UpgradeIt: Classic über den UpgradeIt-Launcher! Du wirst nun weitergeleitet!");
